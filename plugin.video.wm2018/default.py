@@ -20,14 +20,20 @@ params = dict(parse_qsl(urlparse(paramstring).query))
 
 STREAM_CONFIG = {
     'ard': {
-        'name': 'ARD Sportschau live',
-        'thumb': 'special://home/addons/plugin.video.wm2018/resources/ard_thumb.png',
-        'stream_url': 'http://embr-lh.akamaihd.net/i/em2016_br@118542/master.m3u8?b=0-',
+        'name': 'ARD live',
+        'stream_url': 'https://derste247livede.akamaized.net/hls/live/658317/daserste_de/04cfc76071a513710ef7683ebe3e1add/index_7.m3u8',
+    },
+    'one': {
+        'name': 'One live',
+        'stream_url': 'https://onelivestream-lh.akamaihd.net/i/one_livestream@568814/index_7_av-p.m3u8'
     },
     'zdf': {
         'name': 'ZDF live',
-        'thumb': 'special://home/addons/plugin.video.wm2018/resources/zdf_thumb.png',
-        'stream_url': 'http://zdf1314-lh.akamaihd.net/i/de14_v1@392878/index_3096_av-p.m3u8?sd=10',
+        'stream_url': 'http://zdf1314-lh.akamaihd.net/i/de14_v1@392878/index_3096_av-p.m3u8',
+    },
+    'zdf_info': {
+        'name': 'ZDF Info live',
+        'stream_url': 'https://zdf1112-lh.akamaihd.net/i/de12_v1@392882/master.m3u8',
     },
 }
 
@@ -41,11 +47,6 @@ def list_videos():
 
     for stream_id, conf in STREAM_CONFIG.items():
         title = conf['name']
-        art_settings = {
-            'thumb': conf['thumb'],
-            'icon': conf['thumb'],
-            'fanart': conf['thumb'],
-        }
         video_settings = {
             'title': title,
             'mediatype': 'video',
@@ -53,7 +54,6 @@ def list_videos():
 
         list_item = xbmcgui.ListItem(label=title)
         list_item.setInfo('video', video_settings)
-        list_item.setArt(art_settings)
         list_item.setProperty('IsPlayable', 'true')
 
         # Create a URL for a plugin recursive call.

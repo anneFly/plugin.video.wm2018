@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.wm2018" name="WM 2018" version="0.0.1" provider-name="annefly">
+<addon id="plugin.video.wm2018" name="WM 2018" version="0.0.2" provider-name="annefly">
     <requires>
 		<import addon="xbmc.python" version="2.25.0"/>
     </requires>
@@ -12,8 +12,8 @@
 		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
 		<source></source>
         <summary lang="en">World Cup 2018 Live</summary>
-        <description lang="en">Live stream of the football world cup 2018 from Sportschau and ZDF</description>
+        <description lang="en">Live streams to watch the football world vup 2018 from german TV.</description>
         <summary lang="de">WM 2018 Live</summary>
-        <description lang="de">Livestream der Fußball-WM 2018 von Sportschau und ZDF</description>
+        <description lang="de">Livestreams zum Schauen der Fußball-Weltmeisterschaft 2018 im Deutschen Fernsehen.</description>
     </extension>
 </addon>
