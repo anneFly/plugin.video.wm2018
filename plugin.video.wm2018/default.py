@@ -20,8 +20,8 @@ params = dict(parse_qsl(urlparse(paramstring).query))
 
 STREAM_CONFIG = {
     'ard': {
-        'name': 'ARD live',
-        'stream_url': 'https://derste247livede.akamaized.net/hls/live/658317/daserste_de/04cfc76071a513710ef7683ebe3e1add/index_7.m3u8',
+        'name': 'Sportschau live',
+        'stream_url': 'https://wm2018.akamaized.net/hls/live/625036/wm2018/master.m3u8',
     },
     'one': {
         'name': 'One live',
@@ -29,7 +29,7 @@ STREAM_CONFIG = {
     },
     'zdf': {
         'name': 'ZDF live',
-        'stream_url': 'http://zdf1314-lh.akamaihd.net/i/de14_v1@392878/index_3096_av-p.m3u8',
+        'stream_url': 'https://zdf1314-lh.akamaihd.net/i/de14_v1@392878/index_3096_av-p.m3u8',
     },
     'zdf_info': {
         'name': 'ZDF Info live',
@@ -54,7 +54,6 @@ def list_videos():
 
         list_item = xbmcgui.ListItem(label=title)
         list_item.setInfo('video', video_settings)
-        list_item.setProperty('IsPlayable', 'true')
 
         # Create a URL for a plugin recursive call.
         # Example: plugin://plugin.video.example/?stream_id=ard

@@ -1,6 +1,6 @@
 # Kodi plugin to watch german live streams of the world cup 2018
 
-With this simple plugin you can watch the Sportschau and the ZDF livestream
+With this simple plugin you can watch the livestreams of the german TV stations
 that broadcast the football world cup 2018.
 
 The livestreams are most likely geoblocked, so the plugin will only work if
